@@ -1,134 +1,95 @@
+s<!DOCTYPE HTML>
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title></title>
+<html>
+	<head>
+		<title>Roothawg Or Die</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-</head>
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-rebel"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Roothawg Or Die</h1>
+								<p>USMA Company H-1</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">News</a></li>
+								<li><a href="#calendar">Calendar</a></li>
+								<li><a href="#tracker">Tracker</a></li>
+								<li><a href="#docs">Docs</a></li>
+							</ul>
+						</nav>
+						<ul class="icons">
+									<li><a href="https://cis.usma.edu/" class="icon fa-empire"><span class="label">CIS</span></a></li>
+									<li><a href="https://www.instagram.com/roothawg_or_die/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://venmo.com/roothawg_or_die" class="icon fa-usd"><span class="label">Venmo</span></a></li>
+						</ul>
+					</header>
 
-<style>
+				<!-- Main -->
+					<div id="main">
 
-body {
-	
-	background-image: url('grunge_patterns.jpg');
-	background-attachment: fixed;
-	color: #333;
-}
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Announcements</h2>
+								<span class="image main"><img src="images/flag.jpg" alt="" /></span>
+								<p>
+								<ul>
+									<li>Parents Weekend Hog Roast 19 OCT 18 </li>
+									<li>Spirit Survey coming out soon!</li>
+								</ul>
+								</p>
+							</article>
 
-.box {
-	border-radius: 3px;
-	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
-}
+						<!-- Docs -->
+							<article id="docs">
+								<h2 class="major">Docs</h2>
+								<p><iframe src="https://drive.google.com/embeddedfolderview?id=11X92Pezrs5vh_csFCqOSbvF1AXzFRXIk#grid" width="100%" height="600" frameborder="0"></iframe></p>
+							</article>
 
-.lightbox {
-	zoom: 1.5;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(10, 10, 10, 0.8);
-	text-align: center;
-	margin: auto;
-	
-}
+						<!-- Tracker -->
+							<article id="tracker">
+								<h2 class="major">Tracker</h2>
+								<p><iframe src="https://docs.google.com/spreadsheets/d/1hyafhVjstRrd5F5kxpgVOnkOiNNrK5UYgx8-gvsZdTI/edit?usp=sharing;headers=false" width="100%" height="600" frameborder="0"></iframe></p>
+							</article>
 
-div.horizontal {
-	display: flex;
-	justify-content: center;
-	height: 100%;
-}
+						<!-- Calendar -->
+							<article id="calendar">
+								<h2 class="major">Calendar</h2>
+								<p><iframe src="https://calendar.google.com/calendar/embed?src=l8j2ip51r2rpudp0ej60ate30c%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe></p>
+							</article>
 
-div.vertical {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-}
+					</div>
 
-::-webkit-input-placeholder {
-   color: #955;
-   text-align: center;
-}
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; USCC H-1.</p>
+					</footer>
 
-::-moz-placeholder {  
-   color: #955;
-   text-align: center;
-}
-
-:-ms-input-placeholder {  
-   color: #955;
-   text-align: center;
-}
-
-</style>
-
-<body>
-	
-	<div id="loginbox" class="lightbox" >
-		<div class="horizontal">
-			<div class="vertical">
-				<div class="box">				
-					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
-					<button id="loginbutton" type="button">Enter</button>
-					<p id="wrongPassword" style="display: none">wrong password</p>
-				</div>
 			</div>
-		</div>
-	</div>
 
+		<!-- BG -->
+			<div id="bg"></div>
 
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-	 
-
-	 <script type="text/javascript" src="https://cdn.rawgit.com/chrisveness/crypto/master/sha1.js"></script>
-
-	<script type="text/javascript">
-	"use strict";
-
-
-	function loadPage(pwd) {
-		
-		var hash= pwd;
-		hash= Sha1.hash(pwd);
-		var url= hash + "/index.html";
-			
-		$.ajax({
-			url : url,
-			dataType : "html",
-			success : function(data) {
-
-				window.location= url;
-
-			},
-			error : function(xhr, ajaxOptions, thrownError) {
-			
-
-				parent.location.hash= hash;
-
-				//$("#wrongPassword").show();
-				$("#password").attr("placeholder","wrong password");
-				$("#password").val("");
-			}
-		});
-	}
-
-	 
-	$("#loginbutton").on("click", function() {
-		loadPage($("#password").val());
-	});
-	$("#password").keypress(function(e) {
-		if (e.which == 13) {
-			
-			loadPage($("#password").val());
-		}
-	});
-	$("#password").focus();
-		
-	</script>
-
-</body>
+	</body>
 </html>
